@@ -1,0 +1,24 @@
+<template>
+  <require from="./modules/post-list"></require>
+  <require from="./app.css"></require>
+  <div class="app">
+    <div class="sidebar">
+      <video autoplay muted loop id="bg-video">
+        <source src="../static/sidebar.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+      <img src="../static/logo.png" class="card-img-top" alt="Card image">
+      <br>
+      <div if.bind="enableTask2">
+        <button class="btn btn-info" click.delegate="start()">Start task2</button>
+        <div class="word-card">
+          <p>${currentWord}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <post-list></post-list>
+    </div>
+  </div>
+</template>

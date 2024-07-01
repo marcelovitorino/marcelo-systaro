@@ -1,0 +1,39 @@
+{
+	"compileOnSave": true,
+	"compilerOptions": {
+		"rootDir": "src",
+		"outDir": "../resources/static/app/dist",
+		"sourceMap": true,
+		"target": "es5",
+		"module": "esnext",
+		"declaration": false,
+		"noImplicitAny": false,
+		"removeComments": false,
+		"emitDecoratorMetadata": true,
+		"experimentalDecorators": true,
+		"allowSyntheticDefaultImports": true,
+		"moduleResolution": "node",
+		"lib": [
+			"es2016",
+			"dom"
+		],
+		"types": [ ],
+		"baseUrl": "./src/",
+		"paths": {
+			"src/*": [
+				"src/*"
+			]
+		}
+	},
+	"exclude": [
+		"node_modules",
+		"dist",
+		"build",
+		"test",
+		"aurelia_project"
+	],
+	"atom": {
+		"rewriteTsconfig": false
+	},
+	"buildOnSave": true
+}

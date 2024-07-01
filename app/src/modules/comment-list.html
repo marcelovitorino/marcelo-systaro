@@ -1,0 +1,20 @@
+<template>
+  <require from="./comment-list.css"></require>
+  <div class="comments-container">
+    <div class="comment-card" repeat.for="comment of comments">
+      <div class="comment-header" id="commentHeading-${comment.id}">
+        <h6 class="comment-title">
+          ${comment.name}
+        </h6>
+      </div>
+      <div class="comment-body">
+        <p>${comment.body}</p>
+        <p class="comment-email text-muted">${comment.email}</p>
+      </div>
+    </div>
+    <div class="pagination-buttons">
+      <button class="btn btn-primary" click.trigger="expandComments()" if.bind="currentPage < totalPages">+</button>
+      <button class="btn btn-secondary" click.trigger="resetComments()" if.bind="currentPage >= totalPages">-</button>
+    </div>
+  </div>
+</template>

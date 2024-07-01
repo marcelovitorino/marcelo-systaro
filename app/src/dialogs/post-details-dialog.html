@@ -1,0 +1,20 @@
+<template>
+    <require from="./post-details-dialog.css"></require>
+    <require from="../modules/comment-list"></require>
+    <ux-dialog class="modal-lg post-detail-dialog">
+      <ux-dialog-header>
+        <h4 class="modal-title">${post.title}</h4>
+      </ux-dialog-header>
+      <ux-dialog-body>
+        <div class="post-content">
+          <p class="post-body">${post.body}</p>
+          <hr>
+          <comment-list post.bind="post"></comment-list>
+        </div>
+      </ux-dialog-body>
+      <ux-dialog-footer class="sticky-footer">
+        <button class="btn btn-primary" click.trigger="controller.ok()">Ok</button>
+      </ux-dialog-footer>
+    </ux-dialog>
+  </template>
+  

@@ -1,0 +1,13 @@
+<template>
+    <require from="./pagination-view.css"></require>
+    <div class="pagination" id="floatingPagination">
+      <button click.trigger="previousPage()" class="pagination-button" disabled.bind="currentPage === 1">
+        Previous
+      </button>
+      <span class="pagination-info">Page ${currentPage} of ${totalPages}</span>
+      <button click.trigger="nextPage()" class="pagination-button" disabled.bind="currentPage === totalPages">
+        Next
+      </button>
+    </div>
+  </template>
+  

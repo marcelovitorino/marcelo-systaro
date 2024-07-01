@@ -1,0 +1,24 @@
+<template>
+  <require from="./comment-list"></require>
+  <require from="../visual-elements/pagination-view"></require>
+  <require from="./post-list.css"></require>
+
+  <div class="post-list">
+    <div class="card mb-4" repeat.for="post of posts">
+      <div class="card-body">
+        <h2 class="card-title clickable fw-bold" click.delegate="loadPostDetail(post)">
+          ${post.title}
+        </h2>
+        <p class="card-text preview text-secondary">
+          ${post.body.split('\n')[0]}...
+        </p>
+      </div>
+    </div>
+  </div>
+
+    <pagination-view
+    current-page.bind="currentPage"
+    total-pages.bind="totalPages"
+    page-changed-callback.bind="loadPosts"
+  ></pagination-view>
+</template>
