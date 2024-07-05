@@ -1,13 +1,13 @@
-package com.systaro.web_service;
+package com.sytaro.webserver;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class WebServiceApplication {
+public class WebserverApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(WebServiceApplication.class, args);
+		SpringApplication.run(WebserverApplication.class, args);
 	}
 
 }
